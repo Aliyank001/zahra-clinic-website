@@ -49,7 +49,10 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="logo-icon">Z</div>
-                <span class="clinic-name">Zahra Health</span>
+                <div class="clinic-name-wrap">
+                    <span class="clinic-name-main">Zahra Health Clinic</span>
+                    <span class="clinic-name-sub">by Dr. Hina</span>
+                </div>
             </div>
             
             <div class="hamburger" id="hamburger">
@@ -84,8 +87,12 @@
         
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Advanced Skin, Laser & <span class="text-accent">Aesthetic Care</span></h1>
-                <p class="hero-subtitle">State-of-the-Art Laser Technology | Expert Dermatology | Personalized Skin Treatments</p>
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-badge">Bahria Town Karachi</span>
+                    <span class="hero-eyebrow-text">Zahra Health Clinic by Dr. Hina</span>
+                </div>
+                <h1 class="hero-title">Radiant Skin, Laser & <span class="text-accent">Aesthetic Care</span></h1>
+                <p class="hero-subtitle">Premium skin treatments, advanced laser technology, and doctor-led care tailored for natural results.</p>
                 
                 <div class="hero-trust-badges">
                     <div class="trust-badge">
@@ -112,6 +119,21 @@
                         WhatsApp Consultation
                     </a>
                 </div>
+
+                <div class="hero-highlights">
+                    <div class="hero-highlight-pill">
+                        <i class="fas fa-star"></i>
+                        <span>Natural-looking results</span>
+                    </div>
+                    <div class="hero-highlight-pill">
+                        <i class="fas fa-user-md"></i>
+                        <span>Doctor-guided treatments</span>
+                    </div>
+                    <div class="hero-highlight-pill">
+                        <i class="fas fa-clock"></i>
+                        <span>Fast consultation booking</span>
+                    </div>
+                </div>
             </div>
             
             <div class="hero-card" data-tilt>
@@ -120,17 +142,35 @@
                     <form class="hero-form" id="heroForm">
                         <input type="text" placeholder="Your Name" required>
                         <input type="tel" placeholder="Phone Number" required>
-                        <select required>
-                            <option value="">Select Treatment</option>
-                            <option value="dermal-fillers">Dermal Fillers</option>
-                            <option value="botox">Botox</option>
-                            <option value="thread-lifts">Thread Lifts</option>
-                            <option value="hydrafacial">HydraFacial</option>
-                            <option value="chemical-peels">Chemical Peels</option>
-                            <option value="rf-microneedling">RF Microneedling</option>
-                            <option value="laser-treatment">Laser Treatments</option>
-                            <option value="consultation">Consultation</option>
-                        </select>
+                        <div class="premium-select-wrap hero-premium-select-wrap">
+                            <select name="treatment" class="premium-select hero-premium-select" required>
+                                <option value="">Select Treatment</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="Fat Dissolving Injection">Fat Dissolving Injection</option>
+                                <option value="HydraFacial">HydraFacial</option>
+                                <option value="Hair Laser Removal">Hair Laser Removal</option>
+                                <option value="Thread Lift">Thread Lift</option>
+                                <option value="Botox">Botox</option>
+                                <option value="Filler">Filler</option>
+                                <option value="Profhilo">Profhilo</option>
+                                <option value="CO2 Laser Resurfacing">CO2 Laser Resurfacing</option>
+                                <option value="Acne Scar Treatment">Acne Scar Treatment</option>
+                                <option value="PRP Face & Scalp">PRP Face & Scalp</option>
+                                <option value="Mesotherapy">Mesotherapy</option>
+                                <option value="Mole / Skin Tag Removal">Mole / Skin Tag Removal</option>
+                                <option value="Chemical Peels">Chemical Peels</option>
+                                <option value="Melasma Treatment">Melasma Treatment</option>
+                                <option value="Antioxidant Drip">Antioxidant Drip</option>
+                                <option value="Exosomes">Exosomes</option>
+                            </select>
+                        </div>
+                        <div class="premium-select-wrap hero-premium-select-wrap">
+                            <select name="doctor" class="premium-select hero-premium-select">
+                                <option value="">Preferred Doctor (Optional)</option>
+                                <option value="Dr. Hina Wazir">Dr. Hina Wazir</option>
+                                <option value="Dr. Ahmed Khalil">Dr. Ahmed Khalil</option>
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-small">Send WhatsApp</button>
                     </form>
                 </div>
@@ -195,10 +235,10 @@
 
                 <div class="service-card" data-service="rf-microneedling">
                     <div class="service-icon">
-                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <i class="fas fa-vial"></i>
                     </div>
-                    <h3>RF Microneedling</h3>
-                    <p>Radiofrequency-powered microneedling for collagen induction and skin tightening.</p>
+                    <h3>PRP Face &amp; Scalp</h3>
+                    <p>Platelet-rich plasma therapy for facial rejuvenation, hair density support, and skin repair.</p>
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -206,8 +246,8 @@
                     <div class="service-icon">
                         <i class="fas fa-syringe"></i>
                     </div>
-                    <h3>Glutathione Injections</h3>
-                    <p>Premium glutathione therapy for skin brightening and antioxidant benefits.</p>
+                    <h3>Skin Booster / PDRN / Biostimulator / Profhilo</h3>
+                    <p>Advanced injectable skin boosters to improve hydration, elasticity, texture, and overall glow.</p>
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -215,17 +255,17 @@
                     <div class="service-icon">
                         <i class="fas fa-laser"></i>
                     </div>
-                    <h3>Laser Treatments</h3>
-                    <p>Advanced laser technology for hair removal, scar treatment, and skin rejuvenation.</p>
+                    <h3>Suprano Titanium Hair Laser</h3>
+                    <p>High-performance laser hair reduction with fast sessions, comfort cooling, and precision safety.</p>
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="service-card" data-service="skincare">
                     <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-fire"></i>
                     </div>
-                    <h3>Skin Care</h3>
-                    <p>Customized skincare treatments and professional guidance for optimal skin health.</p>
+                    <h3>CO2 Laser Resurfacing</h3>
+                    <p>Targeted laser resurfacing for acne scars, skin rejuvenation, pore reduction, and skin tightening.</p>
                     <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -485,17 +525,23 @@
                                 <div class="premium-select-wrap">
                                     <select id="treatment" name="treatment" class="premium-select" required>
                                         <option value="">Select Your Treatment</option>
-                                        <option value="dermal-fillers">Dermal Fillers</option>
-                                        <option value="botox">Botox</option>
-                                        <option value="thread-lifts">Thread Lifts</option>
-                                        <option value="hydrafacial">HydraFacial</option>
-                                        <option value="chemical-peels">Chemical Peels</option>
-                                        <option value="rf-microneedling">RF Microneedling</option>
-                                        <option value="glutathione">Glutathione Injections</option>
-                                        <option value="laser-treatment">Laser Treatments</option>
-                                        <option value="skincare">Skin Care</option>
-                                        <option value="diabetes">Diabetes Consultation</option>
-                                        <option value="dermatology">Dermatology Consultation</option>
+                                        <option value="Consultation">Consultation</option>
+                                        <option value="Fat Dissolving Injection">Fat Dissolving Injection</option>
+                                        <option value="HydraFacial">HydraFacial</option>
+                                        <option value="Hair Laser Removal">Hair Laser Removal</option>
+                                        <option value="Thread Lift">Thread Lift</option>
+                                        <option value="Botox">Botox</option>
+                                        <option value="Filler">Filler</option>
+                                        <option value="Profhilo">Profhilo</option>
+                                        <option value="CO2 Laser Resurfacing">CO2 Laser Resurfacing</option>
+                                        <option value="Acne Scar Treatment">Acne Scar Treatment</option>
+                                        <option value="PRP Face & Scalp">PRP Face & Scalp</option>
+                                        <option value="Mesotherapy">Mesotherapy</option>
+                                        <option value="Mole / Skin Tag Removal">Mole / Skin Tag Removal</option>
+                                        <option value="Chemical Peels">Chemical Peels</option>
+                                        <option value="Melasma Treatment">Melasma Treatment</option>
+                                        <option value="Antioxidant Drip">Antioxidant Drip</option>
+                                        <option value="Exosomes">Exosomes</option>
                                     </select>
                                 </div>
                             </div>
@@ -505,9 +551,8 @@
                                 <div class="premium-select-wrap">
                                     <select id="doctor" name="doctor" class="premium-select">
                                         <option value="">Any Available Specialist</option>
-                                        <option value="dr-hina">Dr. Hina Wazir</option>
-                                        <option value="dr-saher">Dr. Saher Fatima</option>
-                                        <option value="dr-ahmed">Dr. Ahmed Khalil</option>
+                                        <option value="Dr. Hina Wazir">Dr. Hina Wazir</option>
+                                        <option value="Dr. Ahmed Khalil">Dr. Ahmed Khalil</option>
                                     </select>
                                 </div>
                             </div>
@@ -516,7 +561,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="date">Preferred Date</label>
-                                    <input type="date" id="date" name="date" aria-label="Preferred appointment date">
+                                <input type="date" id="date" name="date" aria-label="Preferred appointment date">
                             </div>
 
                             <div class="form-group">
@@ -961,7 +1006,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Zahra Health Clinic. All rights reserved. | Designed for Premium Healthcare Excellence</p>
+                <p>&copy; 2024 Zahra Health Clinic by Dr. Hina. All rights reserved. | designed and developed by <br> <a href="https://www.aaliyankhan.me" target="_blank" >Aaliyan Khan</a></p>
             </div>
         </div>
     </footer>

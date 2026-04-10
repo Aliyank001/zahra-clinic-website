@@ -7,6 +7,7 @@ const scrollProgressBar = document.querySelector('.scroll-progress-bar');
 const loadingScreen = document.getElementById('loadingScreen');
 const backToTopBtn = document.getElementById('backToTop');
 const particlesContainer = document.getElementById('particles');
+const heroVideoElement = document.querySelector('.hero-video');
 const serviceModal = document.getElementById('serviceModal');
 const serviceModalBackdrop = document.getElementById('serviceModalBackdrop');
 const serviceModalClose = document.getElementById('serviceModalClose');
@@ -65,40 +66,40 @@ const serviceDetailsData = {
         downtime: 'Light peeling for a few days'
     },
     'rf-microneedling': {
-        title: 'RF Microneedling',
-        subtitle: 'Collagen Remodeling Treatment',
-        icon: 'fa-wand-magic-sparkles',
-        description: 'Microneedling with radiofrequency energy to improve scars, pores, texture, and skin firmness.',
-        idealFor: 'Acne scars, enlarged pores, lax skin',
-        duration: '45-60 minutes',
-        downtime: '1-3 days redness'
+        title: 'PRP Face & Scalp',
+        subtitle: 'Regenerative Platelet Therapy',
+        icon: 'fa-vial',
+        description: 'Platelet-rich plasma treatment designed to support skin rejuvenation, improve texture, and boost scalp health for stronger-looking hair.',
+        idealFor: 'Dull skin, early hair thinning, scalp nourishment',
+        duration: '35-55 minutes',
+        downtime: 'Minimal, mild redness for a few hours'
     },
     glutathione: {
-        title: 'Glutathione Injections',
-        subtitle: 'Antioxidant Brightening Support',
+        title: 'Skin Booster / PDRN / Biostimulator / Profhilo',
+        subtitle: 'Advanced Injectable Skin Rejuvenation',
         icon: 'fa-syringe',
-        description: 'Doctor-guided antioxidant therapy for skin radiance support and wellness-focused care.',
-        idealFor: 'Dull complexion, antioxidant support',
-        duration: '20-30 minutes',
-        downtime: 'No downtime'
+        description: 'Premium skin-boosting injectables for hydration, elasticity, collagen support, and naturally refreshed skin quality.',
+        idealFor: 'Fine lines, dehydration, texture concerns, skin laxity',
+        duration: '25-40 minutes',
+        downtime: 'Minimal, occasional mild swelling'
     },
     'laser-treatment': {
-        title: 'Laser Treatments',
-        subtitle: 'Advanced Precision Laser Care',
+        title: 'Suprano Titanium Hair Laser',
+        subtitle: 'Advanced Hair Reduction Platform',
         icon: 'fa-laser',
-        description: 'High-precision laser protocols for hair reduction, pigmentation correction, scar improvement, and rejuvenation.',
-        idealFor: 'Hair reduction, scars, pigmentation concerns',
-        duration: '20-60 minutes',
-        downtime: 'Depends on laser type and area'
+        description: 'Comfort-focused hair laser sessions using Suprano Titanium technology for effective long-term hair reduction across multiple skin types.',
+        idealFor: 'Unwanted facial/body hair, fast treatment sessions',
+        duration: '15-45 minutes',
+        downtime: 'No downtime'
     },
     skincare: {
-        title: 'Skin Care',
-        subtitle: 'Personalized Skin Health Plan',
-        icon: 'fa-leaf',
-        description: 'Customized skin programs combining treatment planning and physician-recommended home care.',
-        idealFor: 'Long-term skin maintenance and glow',
-        duration: 'Consultation based',
-        downtime: 'None'
+        title: 'CO2 Laser Resurfacing',
+        subtitle: 'Fractional Resurfacing & Renewal',
+        icon: 'fa-fire',
+        description: 'Focused CO2 laser treatment protocol for acne scars, pore refinement, skin rejuvenation, and tightening support.',
+        idealFor: 'Acne scars, enlarged pores, texture irregularities, skin tightening',
+        duration: '30-60 minutes',
+        downtime: '3-7 days depending on intensity'
     },
     diabetes: {
         title: 'Diabetes Clinic',
@@ -134,6 +135,20 @@ window.addEventListener('load', () => {
         }, 260);
     }, 600);
 });
+
+// ============================================
+// HERO VIDEO TIMED LOOP (19s)
+// ============================================
+if (heroVideoElement) {
+    const loopAtSeconds = 19;
+
+    heroVideoElement.addEventListener('timeupdate', () => {
+        if (heroVideoElement.currentTime >= loopAtSeconds) {
+            heroVideoElement.currentTime = 0;
+            heroVideoElement.play();
+        }
+    });
+}
 
 // ============================================
 // SCROLL PROGRESS BAR
@@ -329,10 +344,13 @@ if (heroForm) {
         
         const name = heroForm.querySelector('input[type="text"]').value;
         const phone = heroForm.querySelector('input[type="tel"]').value;
-        const treatment = heroForm.querySelector('select').value;
+        const treatment = heroForm.querySelector('select[name="treatment"]').value;
+        const doctorField = heroForm.querySelector('select[name="doctor"]');
+        const doctor = doctorField ? doctorField.value : '';
         
         const message = `Hello👋, I'm ${name}. I would like to book a consultation for ${treatment}. My phone number is ${phone}. Please contact me soon.`;
-        const whatsappURL = `https://wa.me/923164364811?text=${encodeURIComponent(message)}`;
+        const finalMessage = doctor ? `${message} Preferred doctor: ${doctor}.` : message;
+        const whatsappURL = `https://wa.me/923164364811?text=${encodeURIComponent(finalMessage)}`;
         
         window.open(whatsappURL, '_blank');
         heroForm.reset();
