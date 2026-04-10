@@ -55,11 +55,11 @@
                 </div>
             </div>
             
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -114,7 +114,7 @@
                         <i class="fas fa-calendar-alt"></i>
                         Book Appointment
                     </a>
-                    <a href="https://wa.me/923164364811?text=Hello%2C%20I%20would%20like%20to%20consult%20about%20treatments%20at%20Zahra%20Health%20Clinic" target="_blank" class="btn btn-secondary">
+                    <a href="https://wa.me/923164364811?text=Hello%2C%20I%20would%20like%20to%20consult%20about%20treatments%20at%20Zahra%20Health%20Clinic" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp Consultation
                     </a>
@@ -330,7 +330,7 @@
                     <i class="fas fa-calendar-check"></i>
                     Book This Service
                 </a>
-                <a href="https://wa.me/923164364811" target="_blank" class="btn btn-secondary">
+                <a href="https://wa.me/923164364811" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                     <i class="fab fa-whatsapp"></i>
                     WhatsApp Inquiry
                 </a>
@@ -409,10 +409,8 @@
 
                 <!-- Doctor 3: Dr. Ahmed Khalil -->
                 <div class="doctor-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="doctor-image">
-                        <div class="doctor-image-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
+                    <div class="doctor-image doctor-image-portrait">
+                        <img src="assets/doctors/dr-ahmed-khalil.jpeg" alt="Dr. Ahmed Khalil" loading="lazy">
                         <div class="doctor-badge">
                             <span>Endocrinologist</span>
                         </div>
@@ -611,7 +609,7 @@
                     <div class="emergency-contact">
                         <h4>Quick Contact</h4>
                         <p><strong>Call:</strong> <a href="tel:03164364811">0316 4364811</a></p>
-                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/923164364811" target="_blank">0316 4364811</a></p>
+                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/923164364811" target="_blank" rel="noopener noreferrer">0316 4364811</a></p>
                         <p><strong>Hours:</strong> Mon-Fri, 5:30 PM - 9:00 PM</p>
                     </div>
                 </div>
@@ -794,6 +792,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="gallery-item" data-image="assets/before-after/melasma-before-after.jpeg" data-title="Melasma Treatment" data-description="Before and after melasma treatment showing clearer tone, reduced pigmentation, and improved skin appearance.">
+                    <div class="gallery-image">
+                        <img src="assets/before-after/melasma-before-after.jpeg" alt="Melasma before and after treatment result" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-copy">
+                                <span>Before / After</span>
+                                <h3>Melasma Treatment</h3>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -805,7 +816,7 @@
             <p>Book a consultation with our expert dermatologists today</p>
             <div class="banner-buttons">
                 <a href="#booking" class="btn btn-primary">Book Appointment</a>
-                <a href="https://wa.me/923164364811" target="_blank" class="btn btn-white">WhatsApp Now</a>
+                <a href="https://wa.me/923164364811" target="_blank" rel="noopener noreferrer" class="btn btn-white">WhatsApp Now</a>
             </div>
         </div>
     </section>
@@ -845,7 +856,7 @@
                     <div class="contact-card">
                         <i class="fab fa-whatsapp"></i>
                         <h3>WhatsApp</h3>
-                        <p><a href="https://wa.me/923164364811" target="_blank">0316 4364811</a></p>
+                        <p><a href="https://wa.me/923164364811" target="_blank" rel="noopener noreferrer">0316 4364811</a></p>
                         <p>Instant consultation available</p>
                     </div>
                 </div>
@@ -948,7 +959,7 @@
                 <h2 id="modalTitle">Treatment Title</h2>
                 <p id="modalDescription">Treatment description goes here</p>
                 <div class="modal-actions">
-                    <a href="https://wa.me/923164364811" target="_blank" class="btn btn-primary">
+                    <a href="https://wa.me/923164364811" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i>
                         Inquire About This
                     </a>
@@ -1006,13 +1017,13 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Zahra Health Clinic by Dr. Hina. All rights reserved. | designed and developed by <br> <a href="https://www.aaliyankhan.me" target="_blank" >Aaliyan Khan</a></p>
+                <p>&copy; 2026 Zahra Health Clinic by Dr. Hina. All rights reserved. | designed and developed by <br> <a href="https://www.aaliyankhan.me" target="_blank" rel="noopener noreferrer">Aaliyan Khan</a></p>
             </div>
         </div>
     </footer>
 
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/923164364811?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Zahra%20Health%20Clinic" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/923164364811?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Zahra%20Health%20Clinic" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 

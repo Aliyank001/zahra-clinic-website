@@ -324,6 +324,11 @@ body {
     gap: 6px;
     min-width: 34px;
     min-height: 28px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger span {
@@ -1035,8 +1040,8 @@ body {
 
 .doctors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
 }
 
 .doctor-card {
@@ -1046,6 +1051,9 @@ body {
     box-shadow: 0 16px 40px rgba(21, 21, 35, 0.12);
     transition: var(--transition);
     border: 1px solid rgba(192, 154, 95, 0.22);
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .doctor-card:hover {
@@ -1055,12 +1063,30 @@ body {
 
 .doctor-image {
     position: relative;
-    height: 300px;
+    height: 250px;
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.doctor-image-portrait {
+    background: linear-gradient(160deg, #f9f5ef, #f1e9df);
+}
+
+.doctor-image-portrait img {
+    object-fit: contain;
+    object-position: center center;
+    padding-top: 8px;
 }
 
 .doctor-image-placeholder {
@@ -1087,12 +1113,12 @@ body {
 }
 
 .doctor-info {
-    padding: 30px;
+    padding: 24px;
 }
 
 .doctor-info h3 {
     font-family: var(--font-heading);
-    font-size: 26px;
+    font-size: 23px;
     margin-bottom: 5px;
     color: var(--color-dark);
 }
@@ -2603,6 +2629,14 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .doctor-card {
+        max-width: 330px;
+    }
+
+    .doctor-image {
+        height: 220px;
+    }
+
     /* Booking */
     .booking-wrapper {
         grid-template-columns: 1fr;
@@ -2952,6 +2986,14 @@ body {
     .contact-card,
     .testimonial-card {
         padding: 22px 18px;
+    }
+
+    .doctor-card {
+        max-width: 300px;
+    }
+
+    .doctor-image {
+        height: 200px;
     }
 
     .doctor-info h3,

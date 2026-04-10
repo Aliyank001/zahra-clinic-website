@@ -172,16 +172,21 @@ window.addEventListener('scroll', () => {
 // ============================================
 // HAMBURGER MENU
 // ============================================
+function setMenuState(isOpen) {
+    hamburger.classList.toggle('active', isOpen);
+    navMenu.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    const isOpen = !hamburger.classList.contains('active');
+    setMenuState(isOpen);
 });
 
 // Close menu when a link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        setMenuState(false);
     });
 });
 
@@ -281,7 +286,7 @@ createParticles();
 // SCROLL REVEAL ANIMATIONS
 // ============================================
 const autoRevealTargets = document.querySelectorAll(
-    'section h1, section h2, section h3, section h4, section p, section li, section .btn, section .service-card, section .doctor-card, section .why-card, section .testimonial-card, section .timing-card, section .contact-card, section .gallery-item, footer .footer-section, footer .footer-bottom'
+    'section h1, section h2, section h3, section h4, section p, section li, section .btn, section .service-card, section .doctor-card, section .why-card, section .testimonial-card, section .timing-card, section .contact-card, section .gallery-item, footer .footer-section'
 );
 
 autoRevealTargets.forEach((element, index) => {
@@ -472,91 +477,6 @@ faqQuestions.forEach(question => {
         }
     });
 });
-
-// ============================================
-// GALLERY LIGHTBOX (Enhanced)
-// ============================================
-const galleryImgs = document.querySelectorAll('.gallery-btn');
-
-galleryImgs.forEach(img => {
-    img.addEventListener('click', (e) => {
-        e.preventDefault();
-        const category = img.closest('.gallery-item').getAttribute('data-category');
-        const title = img.closest('.gallery-item').querySelector('p').textContent;
-        createLightbox(title, category);
-    });
-});
-
-function createLightbox(title, category) {
-    const lightbox = document.createElement('div');
-    lightbox.className = 'lightbox';
-    lightbox.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        animation: fadeIn 0.3s ease;
-    `;
-    
-    lightbox.innerHTML = `
-        <div class="lightbox-content" style="position: relative; text-align: center;">
-            <button class="lightbox-close" style="
-                position: absolute;
-                top: -40px;
-                right: 0;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 30px;
-                cursor: pointer;
-                z-index: 10000;
-            ">&times;</button>
-            <div style="
-                background: linear-gradient(135deg, #c41e58, #e74c89);
-                padding: 40px;
-                border-radius: 15px;
-                color: white;
-                max-width: 500px;
-            ">
-                <h2 style="margin-bottom: 10px; font-family: 'Playfair Display';">${title}</h2>
-                <p style="margin-bottom: 20px; opacity: 0.9;">Category: ${category}</p>
-                <p style="font-size: 14px; opacity: 0.8;">This is a premium treatment result from Zahra Health Clinic.</p>
-                <a href="https://wa.me/923164364811?text=I%20would%20like%20to%20know%20more%20about%20the%20${category}%20treatment" target="_blank" style="
-                    display: inline-block;
-                    margin-top: 15px;
-                    padding: 10px 25px;
-                    background: white;
-                    color: #c41e58;
-                    border-radius: 25px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    transition: all 0.3s ease;
-                ">Contact for Details</a>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(lightbox);
-    
-    const closeBtn = lightbox.querySelector('.lightbox-close');
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.animation = 'fadeOut 0.3s ease';
-        setTimeout(() => lightbox.remove(), 300);
-    });
-    
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.animation = 'fadeOut 0.3s ease';
-            setTimeout(() => lightbox.remove(), 300);
-        }
-    });
-}
 
 // ============================================
 // SMOOTH SCROLL FOR ANCHOR LINKS
