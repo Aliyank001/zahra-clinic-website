@@ -451,11 +451,10 @@ body {
 }
 
 .text-accent {
-    background: linear-gradient(135deg, #6f132d, #8e1f3f);
-    color: #7b1733;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #65132d;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    text-shadow: none;
 }
 
 /* ============================================
