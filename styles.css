@@ -478,68 +478,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
-.hero-video {
+.hero-background::before {
+    content: '';
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.66) saturate(0.95) contrast(0.97);
-    transform: scale(1.04);
-    animation: heroVideoTone 14s ease-in-out infinite alternate;
+    background-image:
+        linear-gradient(120deg, rgba(22, 16, 33, 0.56) 0%, rgba(27, 20, 37, 0.34) 38%, rgba(48, 33, 51, 0.22) 100%),
+        url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center center;
+    transform: scale(1.03);
 }
 
-.hero-video-overlay {
+.hero-background::after {
+    content: '';
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 70% 18%, rgba(192, 154, 95, 0.12) 0%, transparent 34%),
-        linear-gradient(120deg, rgba(255, 247, 241, 0.58) 0%, rgba(255, 255, 255, 0.22) 45%, rgba(245, 232, 223, 0.54) 100%);
-    animation: heroOverlayPulse 14s ease-in-out infinite alternate;
-}
-
-.gradient-blur {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.22;
-}
-
-.blur-1 {
-    width: 500px;
-    height: 500px;
-    background: var(--color-primary);
-    top: -200px;
-    right: -200px;
-    animation: float 8s ease-in-out infinite;
-}
-
-.blur-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--color-primary-light);
-    bottom: -200px;
-    left: -200px;
-    animation: float 6s ease-in-out infinite reverse;
-}
-
-#particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--color-primary);
-    border-radius: 50%;
-    opacity: 0.5;
-    pointer-events: none;
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 34%),
+        linear-gradient(140deg, rgba(241, 228, 220, 0.52) 0%, rgba(225, 207, 198, 0.44) 42%, rgba(236, 219, 210, 0.56) 100%);
 }
 
 .hero-content {
@@ -2371,15 +2331,6 @@ body {
     }
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -2397,24 +2348,6 @@ body {
     }
     100% {
         transform: translateX(100px);
-    }
-}
-
-@keyframes heroVideoTone {
-    0% {
-        filter: brightness(0.66) saturate(0.94) contrast(0.96);
-    }
-    100% {
-        filter: brightness(0.78) saturate(1) contrast(1);
-    }
-}
-
-@keyframes heroOverlayPulse {
-    0% {
-        opacity: 0.92;
-    }
-    100% {
-        opacity: 1;
     }
 }
 
@@ -2601,13 +2534,13 @@ body {
         gap: 40px;
     }
 
-    .hero-video {
-        filter: brightness(0.58) saturate(0.92) contrast(0.98);
+    .hero-background::before {
+        background-position: center 22%;
     }
 
-    .hero-video-overlay {
+    .hero-background::after {
         background:
-            linear-gradient(180deg, rgba(255, 248, 243, 0.48) 0%, rgba(245, 236, 230, 0.38) 44%, rgba(243, 233, 226, 0.58) 100%);
+            linear-gradient(180deg, rgba(236, 223, 214, 0.62) 0%, rgba(223, 204, 193, 0.5) 44%, rgba(233, 217, 207, 0.72) 100%);
     }
 
     .hero-buttons {

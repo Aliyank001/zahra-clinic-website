@@ -6,8 +6,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 const scrollProgressBar = document.querySelector('.scroll-progress-bar');
 const loadingScreen = document.getElementById('loadingScreen');
 const backToTopBtn = document.getElementById('backToTop');
-const particlesContainer = document.getElementById('particles');
-const heroVideoElement = document.querySelector('.hero-video');
 const serviceModal = document.getElementById('serviceModal');
 const serviceModalBackdrop = document.getElementById('serviceModalBackdrop');
 const serviceModalClose = document.getElementById('serviceModalClose');
@@ -41,7 +39,7 @@ const serviceDetailsData = {
     'thread-lifts': {
         title: 'Thread Lifts',
         subtitle: 'Non-Surgical Facial Lift',
-        icon: 'fa-sparkles',
+        icon: 'fa-scissors',
         description: 'Lift and tighten mild to moderate skin laxity using absorbable threads designed for contour support.',
         idealFor: 'Jawline definition, sagging cheeks, lift effect',
         duration: '45-60 minutes',
@@ -86,7 +84,7 @@ const serviceDetailsData = {
     'laser-treatment': {
         title: 'Suprano Titanium Hair Laser',
         subtitle: 'Advanced Hair Reduction Platform',
-        icon: 'fa-laser',
+        icon: 'fa-bolt',
         description: 'Comfort-focused hair laser sessions using Suprano Titanium technology for effective long-term hair reduction across multiple skin types.',
         idealFor: 'Unwanted facial/body hair, fast treatment sessions',
         duration: '15-45 minutes',
@@ -135,20 +133,6 @@ window.addEventListener('load', () => {
         }, 260);
     }, 600);
 });
-
-// ============================================
-// HERO VIDEO TIMED LOOP (19s)
-// ============================================
-if (heroVideoElement) {
-    const loopAtSeconds = 19;
-
-    heroVideoElement.addEventListener('timeupdate', () => {
-        if (heroVideoElement.currentTime >= loopAtSeconds) {
-            heroVideoElement.currentTime = 0;
-            heroVideoElement.play();
-        }
-    });
-}
 
 // ============================================
 // SCROLL PROGRESS BAR
@@ -261,26 +245,6 @@ backToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-
-// ============================================
-// PARTICLES ANIMATION
-// ============================================
-function createParticles() {
-    const particleCount = window.innerWidth > 768 ? 50 : 20;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.opacity = Math.random() * 0.5 + 0.25;
-        particle.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite`;
-        particle.style.animationDelay = Math.random() * 2 + 's';
-        particlesContainer.appendChild(particle);
-    }
-}
-
-createParticles();
 
 // ============================================
 // SCROLL REVEAL ANIMATIONS
