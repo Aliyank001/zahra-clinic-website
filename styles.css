@@ -239,7 +239,7 @@ body {
     font-weight: 800;
     letter-spacing: 0.02em;
     line-height: 1;
-    color: #6f132d;
+    color: #65132d;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72), 0 8px 18px rgba(111, 19, 45, 0.12);
 }
 
@@ -249,7 +249,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: #65132d;
     line-height: 1;
 }
 
@@ -484,12 +484,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image:
-        linear-gradient(120deg, rgba(22, 16, 33, 0.56) 0%, rgba(27, 20, 37, 0.34) 38%, rgba(48, 33, 51, 0.22) 100%),
-        url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center center;
-    transform: scale(1.03);
+    background: linear-gradient(135deg, #f4ebe5 0%, #ead8cf 42%, #e2c8bb 100%);
 }
 
 .hero-background::after {
@@ -497,8 +492,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 34%),
-        linear-gradient(140deg, rgba(241, 228, 220, 0.52) 0%, rgba(225, 207, 198, 0.44) 42%, rgba(236, 219, 210, 0.56) 100%);
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.34) 0%, transparent 32%),
+        linear-gradient(140deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(153, 103, 80, 0.06) 100%);
 }
 
 .hero-content {
@@ -524,9 +519,9 @@ body {
     padding: 8px 14px;
     margin-bottom: 18px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.62);
-    border: 1px solid rgba(192, 154, 95, 0.22);
-    box-shadow: 0 10px 24px rgba(21, 21, 35, 0.06);
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(192, 154, 95, 0.18);
+    box-shadow: 0 8px 18px rgba(21, 21, 35, 0.04);
     backdrop-filter: blur(10px);
 }
 
@@ -535,12 +530,12 @@ body {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: #65132d;
 }
 
 .hero-eyebrow-text {
     font-size: 12px;
-    color: rgba(42, 36, 49, 0.95);
+    color: #65132d;
     font-weight: 500;
 }
 
@@ -548,15 +543,15 @@ body {
     font-family: var(--font-heading);
     font-size: clamp(36px, 6vw, 72px);
     font-weight: 800;
-    color: #1f1d2c;
+    color: #16131f;
     line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.45);
+    text-shadow: none;
 }
 
 .hero-subtitle {
     font-size: 20px;
-    color: #111111;
+    color: #201a26;
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
@@ -575,7 +570,7 @@ body {
     align-items: center;
     gap: 12px;
     font-weight: 500;
-    color: rgba(42, 36, 49, 0.94);
+    color: rgba(32, 26, 38, 0.94);
 }
 
 .trust-badge i {
@@ -2170,6 +2165,17 @@ body {
     line-height: 1.7;
 }
 
+.footer-author-link {
+    color: #65132d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-author-link:hover {
+    color: #8b1a3c;
+}
+
 /* ============================================
    FLOATING ELEMENTS
    ============================================ */
@@ -2560,12 +2566,12 @@ body {
     }
 
     .hero-background::before {
-        background-position: center 22%;
+        background: linear-gradient(135deg, #f2e6df 0%, #e8d4c9 50%, #dfc1b4 100%);
     }
 
     .hero-background::after {
         background:
-            linear-gradient(180deg, rgba(236, 223, 214, 0.62) 0%, rgba(223, 204, 193, 0.5) 44%, rgba(233, 217, 207, 0.72) 100%);
+            linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.12) 44%, rgba(153, 103, 80, 0.08) 100%);
     }
 
     .hero-buttons {
